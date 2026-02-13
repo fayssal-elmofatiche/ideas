@@ -617,16 +617,61 @@ def main():
         "--source", type=Path, default=DEFAULT_YAML,
         help=f"Path to source YAML (default: {DEFAULT_YAML})",
     )
+    parser.add_argument(
+        "--watch", action="store_true",
+        help="Watch the source YAML for changes and auto-rebuild.",
+    )
     args = parser.parse_args()
 
-    cv = load_cv(args.source)
-    print(f"Loaded CV from {args.source}")
+    def do_build():
+        cv = load_cv(args.source)
+        if args.lang == "de":
+            cv = translate_cv(cv, use_cache=args.cache)
+        output_path = build_docx(cv, args.lang)
+        return output_path
 
-    if args.lang == "de":
-        cv = translate_cv(cv, use_cache=args.cache)
-
-    output_path = build_docx(cv, args.lang)
+    # Initial build
+    output_path = do_build()
     print(f"Generated: {output_path}")
+
+    if args.watch:
+        import time
+        from watchdog.observers import Observer
+        from watchdog.events import FileSystemEventHandler
+
+        class RebuildHandler(FileSystemEventHandler):
+            def __init__(self):
+                self._last_build = 0
+
+            def on_modified(self, event):
+                if event.is_directory:
+                    return
+                # Only react to the source YAML
+                if Path(event.src_path).resolve() != args.source.resolve():
+                    return
+                # Debounce — ignore events within 1 second of last build
+                now = time.time()
+                if now - self._last_build < 1:
+                    return
+                self._last_build = now
+                print(f"\n--- {args.source.name} changed, rebuilding... ---")
+                try:
+                    out = do_build()
+                    print(f"Generated: {out}")
+                except Exception as e:
+                    print(f"Build error: {e}")
+
+        observer = Observer()
+        observer.schedule(RebuildHandler(), str(args.source.parent), recursive=False)
+        observer.start()
+        print(f"\nWatching {args.source} for changes. Press Ctrl+C to stop.")
+        try:
+            while True:
+                time.sleep(1)
+        except KeyboardInterrupt:
+            observer.stop()
+            print("\nStopped watching.")
+        observer.join()
 
 
 if __name__ == "__main__":

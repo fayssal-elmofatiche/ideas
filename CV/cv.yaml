@@ -11,8 +11,8 @@ contact:
 links:
   - label: flowistic.ai
     url: https://flowistic.ai
-  - label: fintech-dev-night.com
-    url: https://fintech-dev-night.com
+  - label: finteda.com
+    url: https://finteda.com
   - label: LinkedIn
     url: https://www.linkedin.com/in/fayssal-el-mofatiche
 
@@ -43,7 +43,7 @@ skills:
       level: professional
 
 profile: |
-  Technical leader and investment expert with 14+ years of advanced software engineering experience focused on but not limited to investment and quantitative challenges in asset management. Proven expertise in managing, architecting and developing major investment solutions with relevant stakeholders management and regular reporting and pitching to C-Level executives. Delivered platforms used to manage 100s of billions in AuMs. Passionate about the synergies between finance, data and software. Pioneered multi-year learning initiatives with 100s of participants to bridge the skill gap between business and technology. Experienced Python & Data Science trainer with focus on application to finance. Fayssal pioneered lately the first FinTech Developer event in Germany: fintech-dev-night.com
+  Technical leader and investment expert with 14+ years of advanced software engineering experience focused on but not limited to investment and quantitative challenges in asset management. Proven expertise in managing, architecting and developing major investment solutions with relevant stakeholders management and regular reporting and pitching to C-Level executives. Delivered platforms used to manage 100s of billions in AuMs. Passionate about the synergies between finance, data and software. Pioneered multi-year learning initiatives with 100s of participants to bridge the skill gap between business and technology. Experienced Python & Data Science trainer with focus on application to finance. Fayssal pioneered lately the first FinTech Developer event in Germany: finteda.com
 
 testimonials:
   - name: "Dr. Matthias Mueller"
@@ -55,8 +55,8 @@ experience:
   - title: "Author"
     org: "Packt Publishing"
     start: "August 2025"
-    end: "Q1 2026 (forthcoming)"
-    description: "Book: AI Agents in Finance"
+    end: "Q2 2026 (forthcoming)"
+    description: "Book: Building AI Agents in Finance"
     bullets:
       - "Upcoming publication with Packt, focused on practical applications of AI agents in financial services."
       - "Covers architecture, design patterns, compliance considerations, and real-world case studies."
@@ -111,7 +111,7 @@ experience:
   - title: "Commercial Excellence / Sales & Marketing Analytics"
     org: "LANXESS, Koln / Remote"
     start: "September 2024"
-    end: "Present"
+    end: "November 2025"
     description: ""
     bullets:
       - "Features integration and testing for impact on forecasting ML models"
@@ -148,10 +148,10 @@ experience:
     frontend_tech_stack: "SharePoint, Excel, Dash / Plotly, Javascript / React"
     tools_platforms: "Gitlab, Ansible, IntelliJ, VS Code, Jenkins, Jira, Confluence, Splunk, OpenShift / Podman, UV, Ruff"
 
-  - title: "Chief Trainer and Full-Stack Developer"
+  - title: "Educator / Trainer and Full-Stack Developer"
     org: "Flowistic GmbH, Frankfurt a.M."
     start: "February 2024"
-    end: "Present"
+    end: "June 2025"
     description: "Professional trainer for modern data analysis skills for financial teams and platform developer."
     bullets:
       - "Python for finance incl. data analysis, data visualization and machine learning, as well as software development best practices such as Clean Code"
