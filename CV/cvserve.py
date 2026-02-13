@@ -3,6 +3,8 @@
 
 import argparse
 import os
+import platform
+import subprocess
 import sys
 from pathlib import Path
 
@@ -49,6 +51,71 @@ SECTION_ICONS = {
     "References": "icon_profile.png",
     "Testimonials": "icon_testimonials.png",
 }
+
+# ── i18n labels ──
+LABELS = {
+    "en": {
+        "details": "details",
+        "nationality": "Nationality",
+        "links": "Links",
+        "skills": "skills",
+        "leadership_skills": "Leadership Skills",
+        "languages": "Languages",
+        "profile": "Profile",
+        "experience": "Project / Employment History",
+        "education": "Education",
+        "volunteering": "Volunteering",
+        "references": "References",
+        "certifications": "Certifications",
+        "publications": "Publications",
+        "testimonials_heading": "WHAT CLIENTS SAY:",
+    },
+    "de": {
+        "details": "Kontakt",
+        "nationality": "Nationalität",
+        "links": "Links",
+        "skills": "Kompetenzen",
+        "leadership_skills": "Führungskompetenzen",
+        "languages": "Sprachen",
+        "profile": "Profil",
+        "experience": "Projekt- / Berufserfahrung",
+        "education": "Ausbildung",
+        "volunteering": "Ehrenamt",
+        "references": "Referenzen",
+        "certifications": "Zertifizierungen",
+        "publications": "Publikationen",
+        "testimonials_heading": "WAS KUNDEN SAGEN:",
+    },
+}
+
+
+# ── Date parsing for sorting ──
+
+MONTH_MAP = {
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
+    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
+    # German months
+    "januar": 1, "februar": 2, "märz": 3, "mai": 5, "juni": 6,
+    "juli": 7, "oktober": 10, "dezember": 12,
+}
+
+def parse_start_date(date_str: str) -> tuple:
+    """Parse a start date string into (year, month) for sorting. Higher = more recent."""
+    parts = date_str.strip().lower().split()
+    if len(parts) == 2:
+        month_str, year_str = parts
+        month = MONTH_MAP.get(month_str, 0)
+        try:
+            year = int(year_str)
+        except ValueError:
+            year = 0
+        return (year, month)
+    if len(parts) == 1:
+        try:
+            return (int(parts[0]), 0)
+        except ValueError:
+            return (0, 0)
+    return (0, 0)
 
 
 # ── YAML loading ──
@@ -218,7 +285,7 @@ def add_run_to_para(p, text, bold=False, italic=False, size=Pt(9), color=DARK_TE
 
 # ── Sidebar builders ──
 
-def build_sidebar_header(cell, cv):
+def build_sidebar_header(cell, cv, lang="en"):
     """Build the header portion of the sidebar: photo + name."""
     photo_path = BASE_DIR / cv.get("photo", "") if cv.get("photo") else None
 
@@ -229,19 +296,40 @@ def build_sidebar_header(cell, cv):
         run = p_photo.add_run()
         run.add_picture(str(photo_path), width=Cm(2.8))
 
-    # Name
-    add_para(cell, cv["name"], bold=True, size=Pt(18), color=WHITE,
-             align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
+    # Name — split after first name so last name + credential stay on one line
+    name = cv["name"]
+    parts = name.split(" ", 1)
+    p_name = cell.add_paragraph()
+    p_name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_name.paragraph_format.space_after = Pt(4)
+    if len(parts) == 2:
+        run1 = p_name.add_run(parts[0] + "\n")
+        run1.bold = True
+        run1.font.size = Pt(13)
+        run1.font.color.rgb = WHITE
+        run1.font.name = "Arial Narrow"
+        run2 = p_name.add_run(parts[1])
+        run2.bold = True
+        run2.font.size = Pt(13)
+        run2.font.color.rgb = WHITE
+        run2.font.name = "Arial Narrow"
+    else:
+        run1 = p_name.add_run(name)
+        run1.bold = True
+        run1.font.size = Pt(13)
+        run1.font.color.rgb = WHITE
+        run1.font.name = "Arial Narrow"
 
     # Title
     add_para(cell, cv["title"], size=Pt(8), color=SLATE, italic=True,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(12))
 
 
-def build_sidebar_contact(cell, cv):
+def build_sidebar_contact(cell, cv, lang="en"):
     """Build the contact details section in the sidebar."""
+    L = LABELS[lang]
     # Section heading
-    add_para(cell, "details", bold=True, size=Pt(10), color=WHITE,
+    add_para(cell, L["details"], bold=True, size=Pt(10), color=WHITE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_before=Pt(6), space_after=Pt(6))
 
     contact = cv["contact"]
@@ -251,17 +339,18 @@ def build_sidebar_contact(cell, cv):
 
     # Nationality
     add_para(cell, "", space_before=Pt(4))
-    add_para(cell, "Nationality", bold=True, size=Pt(9), color=SLATE,
+    add_para(cell, L["nationality"], bold=True, size=Pt(9), color=SLATE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(2))
     add_para(cell, contact["nationality"], size=Pt(8), color=WHITE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(6))
 
 
-def build_sidebar_links(cell, cv):
+def build_sidebar_links(cell, cv, lang="en"):
     """Build the links section in the sidebar."""
+    L = LABELS[lang]
     if not cv.get("links"):
         return
-    add_para(cell, "Links", bold=True, size=Pt(10), color=WHITE,
+    add_para(cell, L["links"], bold=True, size=Pt(10), color=WHITE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_before=Pt(8), space_after=Pt(6))
 
     for link in cv["links"]:
@@ -269,18 +358,19 @@ def build_sidebar_links(cell, cv):
                  align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(2))
 
 
-def build_sidebar_skills(cell, cv):
+def build_sidebar_skills(cell, cv, lang="en"):
     """Build the skills section in the sidebar."""
+    L = LABELS[lang]
     skills = cv.get("skills", {})
     if not skills:
         return
 
-    add_para(cell, "skills", bold=True, size=Pt(10), color=WHITE,
+    add_para(cell, L["skills"], bold=True, size=Pt(10), color=WHITE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_before=Pt(10), space_after=Pt(6))
 
     # Leadership heading
     if skills.get("leadership"):
-        add_para(cell, "Leadership Skills", bold=True, size=Pt(8), color=SLATE,
+        add_para(cell, L["leadership_skills"], bold=True, size=Pt(8), color=SLATE,
                  align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
         for skill in skills["leadership"]:
             add_para(cell, skill, size=Pt(8), color=WHITE,
@@ -294,15 +384,18 @@ def build_sidebar_skills(cell, cv):
                      align=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(2))
 
 
-def build_sidebar_languages(cell, cv):
+def build_sidebar_languages(cell, cv, lang="en"):
     """Build the languages section in the sidebar."""
+    L = LABELS[lang]
     languages = cv.get("skills", {}).get("languages", [])
     if not languages:
         return
 
-    level_map = {"native": "Native", "fluent": "Fluent", "professional": "Professional", "basic": "Basic"}
+    level_map_en = {"native": "Native", "fluent": "Fluent", "professional": "Professional", "basic": "Basic"}
+    level_map_de = {"native": "Muttersprache", "fluent": "Fließend", "professional": "Verhandlungssicher", "basic": "Grundkenntnisse"}
+    level_map = level_map_de if lang == "de" else level_map_en
 
-    add_para(cell, "Languages", bold=True, size=Pt(10), color=WHITE,
+    add_para(cell, L["languages"], bold=True, size=Pt(10), color=WHITE,
              align=WD_ALIGN_PARAGRAPH.CENTER, space_before=Pt(10), space_after=Pt(6))
 
     for lang in languages:
@@ -313,9 +406,9 @@ def build_sidebar_languages(cell, cv):
 
 # ── Main content builders ──
 
-def add_section_heading(cell, title):
+def add_section_heading(cell, title, icon_key=None):
     """Add a section heading row with icon to main content."""
-    icon_file = SECTION_ICONS.get(title)
+    icon_file = SECTION_ICONS.get(icon_key or title)
     icon_path = ASSETS_DIR / icon_file if icon_file else None
 
     p = cell.add_paragraph()
@@ -355,15 +448,16 @@ def add_labeled_line(cell, label, value, label_color=TEAL, value_color=SLATE):
     add_run_to_para(p, value, size=Pt(8), color=value_color)
 
 
-def build_main_profile(cell, cv):
+def build_main_profile(cell, cv, lang="en"):
     """Build the Profile section in main content."""
-    add_section_heading(cell, "Profile")
+    L = LABELS[lang]
+    add_section_heading(cell, L["profile"], icon_key="Profile")
     add_para(cell, cv["profile"].strip(), size=Pt(9), color=DARK_TEXT,
              font_name="Calibri", space_after=Pt(4))
 
     # Testimonials
     if cv.get("testimonials"):
-        add_para(cell, "WHAT CLIENTS SAY:", bold=True, size=Pt(9), color=NAVY,
+        add_para(cell, L["testimonials_heading"], bold=True, size=Pt(9), color=NAVY,
                  space_before=Pt(8), space_after=Pt(4))
         for t in cv["testimonials"]:
             # Quote
@@ -378,11 +472,13 @@ def build_main_profile(cell, cv):
             add_run_to_para(p, f"\n{t['org']}", size=Pt(8), color=SLATE)
 
 
-def build_main_experience(cell, cv):
+def build_main_experience(cell, cv, lang="en"):
     """Build the Experience section in main content."""
-    add_section_heading(cell, "Project / Employment History")
+    L = LABELS[lang]
+    add_section_heading(cell, L["experience"], icon_key="Project / Employment History")
 
-    for entry in cv.get("experience", []):
+    entries = sorted(cv.get("experience", []), key=lambda e: parse_start_date(e.get("start", "")), reverse=True)
+    for entry in entries:
         # Title + org
         title_text = entry["title"]
         if entry.get("org"):
@@ -432,9 +528,10 @@ def build_main_experience(cell, cv):
                 add_labeled_line(cell, label, text)
 
 
-def build_main_education(cell, cv):
+def build_main_education(cell, cv, lang="en"):
     """Build the Education section in main content."""
-    add_section_heading(cell, "Education")
+    L = LABELS[lang]
+    add_section_heading(cell, L["education"], icon_key="Education")
 
     for entry in cv.get("education", []):
         p_title = cell.add_paragraph()
@@ -455,11 +552,12 @@ def build_main_education(cell, cv):
                      font_name="Calibri", space_after=Pt(2))
 
 
-def build_main_volunteering(cell, cv):
+def build_main_volunteering(cell, cv, lang="en"):
     """Build the Volunteering section in main content."""
+    L = LABELS[lang]
     if not cv.get("volunteering"):
         return
-    add_section_heading(cell, "Volunteering")
+    add_section_heading(cell, L["volunteering"], icon_key="Volunteering")
 
     for entry in cv["volunteering"]:
         p_title = cell.add_paragraph()
@@ -476,20 +574,22 @@ def build_main_volunteering(cell, cv):
                      font_name="Calibri", space_after=Pt(2))
 
 
-def build_main_references(cell, cv):
+def build_main_references(cell, cv, lang="en"):
     """Build the References section in main content."""
+    L = LABELS[lang]
     if not cv.get("references"):
         return
-    add_section_heading(cell, "References")
+    add_section_heading(cell, L["references"], icon_key="References")
     add_para(cell, cv["references"], size=Pt(9), color=DARK_TEXT,
              font_name="Calibri", space_after=Pt(4))
 
 
-def build_main_certifications(cell, cv):
+def build_main_certifications(cell, cv, lang="en"):
     """Build the Certifications section in main content."""
+    L = LABELS[lang]
     if not cv.get("certifications"):
         return
-    add_section_heading(cell, "Certifications")
+    add_section_heading(cell, L["certifications"], icon_key="Certifications")
 
     for entry in cv["certifications"]:
         title_text = entry["name"]
@@ -509,11 +609,12 @@ def build_main_certifications(cell, cv):
                      font_name="Calibri", space_after=Pt(2))
 
 
-def build_main_publications(cell, cv):
+def build_main_publications(cell, cv, lang="en"):
     """Build the Publications section in main content."""
+    L = LABELS[lang]
     if not cv.get("publications"):
         return
-    add_section_heading(cell, "Publications")
+    add_section_heading(cell, L["publications"], icon_key="Publications")
 
     for pub in cv["publications"]:
         p = cell.add_paragraph()
@@ -572,23 +673,23 @@ def build_docx(cv: dict, lang: str) -> Path:
     set_cell_margins(main, top=0.3, bottom=0.5, left=0.5, right=0.3)
 
     # ── Build sidebar ──
-    build_sidebar_header(sidebar, cv)
-    build_sidebar_contact(sidebar, cv)
-    build_sidebar_links(sidebar, cv)
-    build_sidebar_skills(sidebar, cv)
-    build_sidebar_languages(sidebar, cv)
+    build_sidebar_header(sidebar, cv, lang)
+    build_sidebar_contact(sidebar, cv, lang)
+    build_sidebar_links(sidebar, cv, lang)
+    build_sidebar_skills(sidebar, cv, lang)
+    build_sidebar_languages(sidebar, cv, lang)
 
     # ── Build main content ──
     # Clear the default empty paragraph
     main.paragraphs[0].text = ""
 
-    build_main_profile(main, cv)
-    build_main_experience(main, cv)
-    build_main_education(main, cv)
-    build_main_volunteering(main, cv)
-    build_main_references(main, cv)
-    build_main_certifications(main, cv)
-    build_main_publications(main, cv)
+    build_main_profile(main, cv, lang)
+    build_main_experience(main, cv, lang)
+    build_main_education(main, cv, lang)
+    build_main_volunteering(main, cv, lang)
+    build_main_references(main, cv, lang)
+    build_main_certifications(main, cv, lang)
+    build_main_publications(main, cv, lang)
 
     # Save
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -606,8 +707,8 @@ def main():
         description="Build styled CV documents from a single YAML source.",
     )
     parser.add_argument(
-        "--lang", choices=["en", "de"], default="en",
-        help="Output language (default: en). German triggers Claude API translation.",
+        "--lang", choices=["en", "de"], default=None,
+        help="Output language. Omit to generate both EN and DE.",
     )
     parser.add_argument(
         "--cache", action="store_true",
@@ -623,16 +724,33 @@ def main():
     )
     args = parser.parse_args()
 
+    langs = [args.lang] if args.lang else ["en", "de"]
+
     def do_build():
-        cv = load_cv(args.source)
-        if args.lang == "de":
-            cv = translate_cv(cv, use_cache=args.cache)
-        output_path = build_docx(cv, args.lang)
-        return output_path
+        cv_en = load_cv(args.source)
+        outputs = []
+        for lang in langs:
+            cv = cv_en
+            if lang == "de":
+                cv = translate_cv(cv_en, use_cache=args.cache)
+            output_path = build_docx(cv, lang)
+            outputs.append(output_path)
+        return outputs
+
+    def open_file(path):
+        """Open a file with the system default application."""
+        if platform.system() == "Darwin":
+            subprocess.Popen(["open", str(path)])
+        elif platform.system() == "Windows":
+            os.startfile(str(path))
+        else:
+            subprocess.Popen(["xdg-open", str(path)])
 
     # Initial build
-    output_path = do_build()
-    print(f"Generated: {output_path}")
+    outputs = do_build()
+    for output_path in outputs:
+        print(f"Generated: {output_path}")
+        open_file(output_path)
 
     if args.watch:
         import time
@@ -656,8 +774,9 @@ def main():
                 self._last_build = now
                 print(f"\n--- {args.source.name} changed, rebuilding... ---")
                 try:
-                    out = do_build()
-                    print(f"Generated: {out}")
+                    outs = do_build()
+                    for out in outs:
+                        print(f"Generated: {out}")
                 except Exception as e:
                     print(f"Build error: {e}")
 

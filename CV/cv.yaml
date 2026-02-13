@@ -64,6 +64,37 @@ experience:
     tech_stack: []
     soft_skills: []
 
+  - title: "Senior Software Engineer / Technical Lead"
+    org: "Trianel GmbH, Aachen / Remote"
+    start: "November 2025"
+    end: "Present"
+    description: "Triumph — Next-generation algorithmic energy trading platform replacing the legacy Algoframework with a modular, event-driven architecture for automated intraday trading on EPEX Spot, starting with SDAT cross-zonal arbitrage across German TSO areas."
+    bullets:
+      - "Architected and implemented the end-to-end trading pipeline: market data ingress (RabbitMQ), signal computation, strategy evaluation, risk management (4-check gate + kill switch), and order execution via iTrade REST API"
+      - "Designed protocol-based, store-agnostic component architecture enabling backend swaps (Redis to Azure Event Hubs) without code changes"
+      - "Built a decoupled signal layer with background calculation, Redis persistence, and SignalBundle aggregation — allowing signals to be tracked and evaluated independently of trading strategies"
+      - "Developed a full market emulator for reproducible E2E testing and risk-free strategy validation, eliminating dependency on live SDAT trading windows"
+      - "Implemented Redis-backed state management (OrderBook, TradeJournal, ContractPositions, Sessions) with Lua scripts for atomic operations and crash-resilient persistence"
+      - "Created CLI tooling (Typer) and REST API (FastAPI) for operations, configuration, and real-time system control including remote kill switch"
+      - "Authored the MVP specification and roadmap document for stakeholder approval, covering architecture rationale, cost-benefit analysis, and phased rollout plan"
+      - "Established testing culture: 470+ unit tests, ~5s runtime, protocol-based mocking patterns"
+      - "Conducted code reviews and collaborated on Epic scoping (Signal Layer, Decision Layer, Risk Layer, Execution, Configuration Management)"
+    soft_skills:
+      - Technical Leadership
+      - Stakeholder Communication
+      - Autonomous Consulting Delivery
+      - Code Review & Mentoring
+      - Epic-level Planning
+    investment_skills:
+      - "EPEX Spot Intraday Trading"
+      - "SDAT Cross-Zonal Arbitrage"
+      - "Regelzonen (TSO Areas)"
+      - "Order Book Mechanics"
+      - "Risk Limits & Kill Switch"
+    tech_stack:
+      - "Python 3.12+, FastAPI, RabbitMQ (AMQP), Redis (Pub/Sub, Lua scripting), PostgreSQL, InfluxDB, Pydantic, Typer, Docker, uv, pytest, Ruff"
+    tools_platforms: "Confluence, Bitbucket"
+
   - title: "Tech Lead / Full Stack Developer"
     org: "Flowistic GmbH, Frankfurt am Main"
     start: "June 2025"
@@ -98,12 +129,14 @@ experience:
     tech_stack: []
     soft_skills: []
 
-  - title: "Speaker"
+  - title: "Speaker & Chair"
     org: "QuantMinds International, London"
-    start: "November 2024"
-    end: "November 2024"
-    description: '"Beyond Chatbots: Financial Innovation with Agentic LLMs"'
+    start: "November 2025"
+    end: "November 2025"
+    description: ""
     bullets:
+      - "Chaired sessions including welcome and closing remarks"
+      - 'Presentation: "Termflow: Reimagining investment termsheets in the age of AI agents and smart contracts"'
       - "https://informaconnect.com/quantminds-international/speakers/fayssal-el-mofatiche/"
     tech_stack: []
     soft_skills: []
