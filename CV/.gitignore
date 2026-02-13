@@ -1,0 +1,3 @@
+output/*.docx
+output/.cv_de_cache.yaml
+.venv/

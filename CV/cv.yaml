@@ -1,0 +1,556 @@
+name: "Fayssal El Mofatiche, CAIA"
+title: "Financial Services and Technology (AI/Big Data) expert, tech lead, project manager, Full-Stack Developer, Senior Business Analyst, coach / trainer"
+photo: "assets/profile.jpeg"
+
+contact:
+  address: "Kostheimer Str. 14, Frankfurt am Main, 60326, Germany"
+  phone: "+4915201603946"
+  email: "fayssal.elmofatiche@flowistic.ai"
+  nationality: "German"
+
+links:
+  - label: flowistic.ai
+    url: https://flowistic.ai
+  - label: fintech-dev-night.com
+    url: https://fintech-dev-night.com
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/fayssal-el-mofatiche
+
+skills:
+  leadership:
+    - Technical Leadership
+    - Product Ownership
+    - Project Management
+    - Cross-functional & Agile Work
+    - Strong Communication Skills
+  technical:
+    - Software Architecture
+    - Business Analysis
+    - Artificial Intelligence / Machine Learning
+    - Data Analytics
+    - Cloud Computing
+    - Software Development Life Cycle
+    - Scientific/Numerical Computing
+    - Distributed Computing
+  languages:
+    - name: German
+      level: native
+    - name: English
+      level: fluent
+    - name: Arabic
+      level: fluent
+    - name: French
+      level: professional
+
+profile: |
+  Technical leader and investment expert with 14+ years of advanced software engineering experience focused on but not limited to investment and quantitative challenges in asset management. Proven expertise in managing, architecting and developing major investment solutions with relevant stakeholders management and regular reporting and pitching to C-Level executives. Delivered platforms used to manage 100s of billions in AuMs. Passionate about the synergies between finance, data and software. Pioneered multi-year learning initiatives with 100s of participants to bridge the skill gap between business and technology. Experienced Python & Data Science trainer with focus on application to finance. Fayssal pioneered lately the first FinTech Developer event in Germany: fintech-dev-night.com
+
+testimonials:
+  - name: "Dr. Matthias Mueller"
+    role: "CIO Europe"
+    org: "Multi Asset Investment, Allianz Global Investors"
+    quote: "...Mr. El Mofatiche possesses excellent specialist knowledge extending far beyond the mainstream [...]. His exceptional creativity has helped him to find new and helpful solutions matching the problem at hand. He impressed with his exceptional technical understanding, which allowed him to find workable solutions for difficult constellations at any time."
+
+experience:
+  - title: "Author"
+    org: "Packt Publishing"
+    start: "August 2025"
+    end: "Q1 2026 (forthcoming)"
+    description: "Book: AI Agents in Finance"
+    bullets:
+      - "Upcoming publication with Packt, focused on practical applications of AI agents in financial services."
+      - "Covers architecture, design patterns, compliance considerations, and real-world case studies."
+      - "Target audience: Investment professionals, quantitative analysts, FinTech professionals and AI practitioners."
+    tech_stack: []
+    soft_skills: []
+
+  - title: "Tech Lead / Full Stack Developer"
+    org: "Flowistic GmbH, Frankfurt am Main"
+    start: "June 2025"
+    end: "Present"
+    description: "Termflow"
+    bullets:
+      - "Platform: AI-powered investment term sheet generation & validation platform for asset managers, VCs, PEs and legal teams"
+      - "Backend: FastAPI, PostgreSQL, MongoDB, S3, Pydantic, Celery"
+      - "Frontend: React, Tailwind CSS, Slate.js, TypeScript"
+      - "AI Components: Modular AI agents (Legal, Risk, Compliance, Sanity) powered by GPT-4o, Claude 3"
+      - "Features: Clause editor, multi-agent validation, export (PDF/DOCX), JSON schema, version control"
+      - "API & Integration: REST API with OpenAPI docs, webhooks, role-based access, SSO"
+      - "Smart Contracts: Generates smart contract-ready term sheets for structured finance and OTC products (bonds, swaps, credit derivatives)"
+      - "DevOps: Docker, CI/CD, GitHub Actions, staging on Render/Fly.io"
+    tech_stack: []
+    soft_skills: []
+
+  - title: "Tech Lead / Full Stack Developer"
+    org: "Flowistic GmbH, Frankfurt am Main"
+    start: "June 2025"
+    end: "Present"
+    description: "YieldFlow"
+    bullets:
+      - "Platform: Professional financial analytics platform for dividend analysis"
+      - "Backend: FastAPI, PostgreSQL/SQLite, Redis, Celery, SQLAlchemy"
+      - "Frontend: React 19, TypeScript, Material-UI 7, Recharts"
+      - "AI Components: Multi-LLM ensemble (GPT-4, Claude-3, Gemini), Scikit-learn"
+      - "Data Sources: Yahoo Finance, Alpha Vantage, FMP, FRED"
+      - "Features: Real-time data integration, dividend analysis, growth forecasting"
+      - "Visualization: Interactive charts for growth trends and peer comparisons"
+      - "DevOps: Docker, UV package manager, Sentry"
+    tech_stack: []
+    soft_skills: []
+
+  - title: "Speaker"
+    org: "QuantMinds International, London"
+    start: "November 2024"
+    end: "November 2024"
+    description: '"Beyond Chatbots: Financial Innovation with Agentic LLMs"'
+    bullets:
+      - "https://informaconnect.com/quantminds-international/speakers/fayssal-el-mofatiche/"
+    tech_stack: []
+    soft_skills: []
+
+  - title: "Commercial Excellence / Sales & Marketing Analytics"
+    org: "LANXESS, Koln / Remote"
+    start: "September 2024"
+    end: "Present"
+    description: ""
+    bullets:
+      - "Features integration and testing for impact on forecasting ML models"
+      - "Data transformation pipelines in python (pandas, polars, pyspark)"
+      - "Design and programming of ML models for time series forecasting (Demand forecast) (Scikit-Learn, Tensorflow, Pytorch)"
+      - "Versioning and CI/CD with Gitlab"
+      - "Data analysis & validation (matplotlib, plotly)"
+      - "Web Scraping (BeautifulSoup, Selenium)"
+      - "Building of dashboards in plotly Dash (Dash, Core Components, Bootstrap / Mantine Components, SQLAlchemy, Pydantic, Flask)"
+      - "Extraction of features from text using NLP (Langchain, Spacy, Azure OpenAI)"
+      - "Data analysis reports (Power BI)"
+      - "Explainable ML / AI (Shapely Values, Double ML)"
+      - "GenAI (General)"
+    soft_skills:
+      - Presentation
+      - "Cross-functional coordination across Sales & Marketing as well as Production / Manufacturing teams"
+    tech_stack:
+      - "Gitlab, Azure Data Factory, PowerBI, Kubernetes, Docker, Spark"
+
+  - title: "Senior Python Developer / Architect"
+    org: "KfW Group, Frankfurt a.M."
+    start: "May 2024"
+    end: "May 2025"
+    description: ""
+    bullets:
+      - "REST API development with Python and Flask of an advanced (Machine Learning) Greylist Generator for bank wide EUC application assessment, analysis, and regular reporting in line with BAIT / DORA regulation."
+      - "Code review, testing, documentation, and maintenance."
+      - "Report automation."
+      - "Coordination with database, SharePoint, and Big Data / AI teams"
+      - "Regular progress reporting to project stakeholders"
+    soft_skills: []
+    tech_stack:
+      - "Python, Flask, Pandas, Polars, Scikit-Learn (Random Forest), SQLAlchemy, Pydantic, SQL"
+    frontend_tech_stack: "SharePoint, Excel, Dash / Plotly, Javascript / React"
+    tools_platforms: "Gitlab, Ansible, IntelliJ, VS Code, Jenkins, Jira, Confluence, Splunk, OpenShift / Podman, UV, Ruff"
+
+  - title: "Chief Trainer and Full-Stack Developer"
+    org: "Flowistic GmbH, Frankfurt a.M."
+    start: "February 2024"
+    end: "Present"
+    description: "Professional trainer for modern data analysis skills for financial teams and platform developer."
+    bullets:
+      - "Python for finance incl. data analysis, data visualization and machine learning, as well as software development best practices such as Clean Code"
+      - "SQL and business intelligence"
+      - "Generative AI / LLMs"
+      - "Cloud Computing with Databricks for Finance"
+    soft_skills:
+      - Presentation
+      - Persuasion
+      - Sales
+      - Simplification of Complex Concepts
+      - Project Management
+    tech_stack:
+      - "Python, Pandas, Polars, Statmodels, Zipline, Pyfolio, Pytorch, Tensorflow, Plotly/Dash, Panel, Matplotlib, SQL, Seaborn, Llama2, LLamaIndex, ChatGPT, Mistral, Hugging Face, PowerBI, OpenAI API, PySpark"
+    frontend_tech_stack: "Astro, React, Tailwindcss, Typescript"
+    backend_tech_stack: "Python, FastAPI / Flask, Contentful, Postgres, Supabase"
+    devops: "Gitlab, Docker, Netlify, Vercel, Hugging Face"
+    tools_platforms: "Github Codespaces, Jupyter, VS Code, Databricks"
+
+  - title: "Chair of LLMs and Advanced ML Summit"
+    org: "QuantMinds International, London"
+    start: "November 2023"
+    end: "November 2023"
+    description: "Chairing the Large Language Models (LLMs) and Advanced Machine Learning Summit of 2023's QuantMinds International, one of the most renowned finance conferences, in London between 13th and 16th of November"
+    bullets:
+      - "https://informaconnect.com/quantminds-international/speakers/fayssal-el-mofatiche/"
+    tech_stack: []
+    soft_skills: []
+
+  - title: "Python for Investment Professionals Training"
+    org: "Allianz Global Investors, Frankfurt am Main"
+    start: "October 2023"
+    end: "January 2024"
+    description: "A 5 modules Python training tailored to investment professionals. The modules cover the basics of Python, data analysis and visualization, investing with Python, application life cycle like clean code and deployment, and end-to-end team collaboration and co-creation stack."
+    bullets:
+      - "https://investeracy.com/training/python-4-investment/"
+    investment_skills:
+      - Financial Data Analysis
+      - Backtesting
+      - Asset Allocation
+      - Timeseries Forecasting
+    tech_stack:
+      - "Anaconda Cloud / Jupyter, Docker, Python, Gitlab, Dash / Plotly, Pandas, Numpy, Scipy, Matplotlib, Yfinance, Panel, Zipline, Pyfolio, Statmodels, Seaborn, Mkdocs, Poetry, Cufflinks, Bokeh"
+    soft_skills: []
+
+  - title: "Tech Lead / Full-Stack Developer"
+    org: "Multi Family Office, Frankfurt am Main"
+    start: "September 2023"
+    end: "February 2024"
+    description: ""
+    bullets:
+      - "Customized and modern Back Office risk reporting and controlling platform."
+      - "Open architecture through dedicated REST APIs to allow for introducing further modules and integrations."
+      - "Consolidation and complexity reduction of data providers and interfaces, especially for market data and banking interfaces."
+      - "Technically leading the design and development of the prototype and SaaS transformation."
+      - "Coordination with respective Family Office stakeholders and development team."
+    investment_skills:
+      - Wealth Management Workflow
+      - Asset Controlling
+      - "Portfolio Holdings Consolidation / Custodians"
+      - Market Risk Reporting
+      - Family Offices
+    tech_stack:
+      - "Python, FastAPI, Pydantic, SQLAlchemy, Angular, Postgres, Docker, Azure, Auth0, Tailwindcss, Typescript"
+    project_methodology: "Kanban"
+    soft_skills: []
+
+  - title: "CEO and Tech Lead"
+    org: "Flowistic GmbH, Frankfurt am Main"
+    start: "June 2023"
+    end: "Present"
+    description: "Specializing in financial technology consulting, we focus on equipping teams, especially those in Front Office, Advisory, and Sustainability areas, with advanced solutions to their data and technology challenges. Our mission is to transform complex data-driven problems into opportunities for innovation and efficiency, tailoring our services and expertise, e.g. using AI / ML approaches, to meet each team's unique needs."
+    bullets: []
+    soft_skills:
+      - Presentation
+      - Sales & Marketing
+      - Project Management
+      - Business Management
+      - Strategy & Innovation
+      - Conflict Resolution
+      - Business Continuity
+    focus_areas:
+      - "Data Science & Analysis"
+      - "ML / AI"
+      - Cloud Computing
+      - Azure DevOps Pipelines
+      - "Sustainability / ESG"
+      - Investment Advisory
+      - Asset Management
+      - Financial Teams
+      - Github Actions
+      - Helm Charts
+      - IaC
+    tech_stack: []
+
+  - title: "Product Owner / Senior Investment Engineer, Director"
+    org: "Multi Asset Investments, Allianz GI, Frankfurt am Main"
+    start: "September 2022"
+    end: "June 2023"
+    description: ""
+    bullets:
+      - "Improve operational stability of the centerpiece engine for signal generation for Multi Asset investment strategies, most of which are quantitative."
+      - "Align with Platform team, Multi Asset team PMs, Multi Asset Quantitative R&D Team and Multi Asset senior management."
+      - "Consolidate a unified development plan for signal generation and improve code quality using best practices like clean code."
+      - "Establish a future roadmap for signal generation."
+      - "Enhance signal generation infrastructure with monitoring and analytical components"
+      - "Better leverage generated signals through reports and analytics"
+    soft_skills:
+      - Presentation
+      - Coordination & Alignment
+      - Business Analysis
+      - Project Management
+    investment_skills:
+      - Trading Signal Generation
+      - "Fundamental / Technical / Quantitative Analysis"
+      - Trade Analytics
+      - Portfolio Construction
+      - "Sustainability / ESG"
+    tech_stack:
+      - "Python, Azure, Kubernetes, Github Enterprise, Azure DevOps, FastAPI, Streamlit, Docker, Azure Data Factory, Databricks, Redis, RabbitMQ, Pandas, Jinja2, Refinitiv, Azure SQL Databases, Dask, NetworkX, XGBoost, TensorFlow, PyTorch, MLFlow, PyTest, SQLAlchemy, PySpark"
+
+  - title: "Tech Lead / Project Manager / Senior Business Analyst"
+    org: "Investment Business Management, Allianz GI, Frankfurt am Main"
+    start: "May 2020"
+    end: "September 2022"
+    description: ""
+    bullets:
+      - "Platform managed 150+ bn Multi Asset AuMs, expanding to 250 bn with Fixed Income & Trading adoption."
+      - "Met 5 critical Group-level regulatory (KAIT) audit deadlines over 2 years while adhering to software development practices related to clean code, DevOps and InfoSec."
+      - "Introduced agile cross-functional teams and a new role for investment engineers working at the intersection of investment and software engineering."
+      - "Replaced 50+ legacy business-managed applications with a modern cloud-native investment platform."
+      - "Project management incl. reporting and pitching regularly to C-Level senior management."
+      - "Regularly recruited more than 15 internal & external specialists."
+      - "Collaboration through multiple departments and stakeholders like Investment, IT, Risk, and Compliance."
+    soft_skills:
+      - Technical Leadership
+      - Presentation
+      - Business Analysis
+      - Project Management
+      - Stakeholder Management
+      - Innovation
+      - Conflict Resolution
+      - Business Continuity
+      - Strict Delivery
+    investment_skills:
+      - Portfolio Construction
+      - Risk Controlling
+      - Portfolio Optimization
+      - "Sustainability / ESG"
+      - Trading Signal Generation
+      - Portfolio Holdings Aggregation
+      - "Performance Attribution & Analysis"
+    tech_stack:
+      - "Python, Azure, Kubernetes, FastAPI, Redis, Databricks, Angular, Azure SQL Databases, Azure DevOps Pipelines, Github Actions, Azure Data Factory, Databricks, Dremio, RabbitMQ, Celery, PySpark, ROBOT Framework, Locust, JIRA, Confluence, MS Project, PyTest, SQLAlchemy, DataDog, Terraform"
+    project_methodology: "Scrum / Kanban"
+    architecture: "Microservices, Event-Driven, REST APIs, API Gateway"
+    project_size: "20-23 members including Software Engineers, Testers, DevOps Engineers, Frontend Developers, Portfolio Managers, Business Analysts & Project Managers, working agile and cross-functionally."
+
+  - title: "Learning Community Lead"
+    org: "Allianz GI, Frankfurt am Main"
+    start: "June 2019"
+    end: "September 2022"
+    description: "Launched a 'Learncast' initiative, offering bi-weekly tutorials on subjects like investment and programming. This included series on Machine Learning in Asset Management using Python. The community attracted 400+ professionals across all functions, especially investment and technology. The initiative was highly praised by peers and C-Level executives."
+    bullets: []
+    soft_skills:
+      - Teaching
+      - Community building
+      - Stakeholder Management
+      - Innovation
+      - Knowledge Transfer
+    tech_stack: []
+
+  - title: "Portfolio Manager & Senior Technologist, Director"
+    org: "Multi Asset Europe, Frankfurt am Main"
+    start: "March 2019"
+    end: "May 2020"
+    description: ""
+    bullets:
+      - "Co-founded a Multi Asset group for Investment Engineering to architect and push forward the global Multi Asset investment applications to the next level across the different steps of the investment process and the different investment strategies."
+      - "Created/architected and pitched the first blueprint for the new Multi Asset infrastructure strategy to senior management."
+    soft_skills:
+      - Presentation & Pitching
+      - Coordination
+      - Engagement
+      - Vision
+      - Innovation
+      - Training
+      - Project Management
+      - Stakeholder Management
+    tech_stack:
+      - "Python, C#, MATLAB, BitBucket, MS SQL Server, Power BI, Bloomberg, Refinitiv, Windows Server"
+
+  - title: "Portfolio Manager & Senior Technologist, Vice President"
+    org: "Multi Asset Risk Management Overlay, Frankfurt am Main"
+    start: "July 2017"
+    end: "March 2019"
+    description: ""
+    bullets:
+      - "Architected, designed and built an investment infrastructure to manage Risk Management Overlay mandates of over 50 billions EUR at the time."
+      - "Infrastructure included a SQL database, a C# backend, and a control sheet for strategy allocation using MATLAB and Excel/VBA. A management sheet and a hedge basket tool were also used."
+      - "Later on, distributed Python-based tools were introduced for tail-risk hedging."
+    soft_skills:
+      - Presentation
+      - Simplification of Complex Concepts
+      - Coordination
+      - Engagement
+      - Conflict Resolution
+      - Project Management
+      - Innovation
+    investment_skills:
+      - Option Hedging
+      - Tail Risk Management
+      - Strategic Asset Allocation
+      - Tactical Asset Allocation
+      - Portfolio Optimization
+      - Trade Vector Generation
+      - Post-Trade Analysis
+      - Performance Reporting
+      - Investment Strategies
+    tech_stack:
+      - "Python, MATLAB, C#, MS SQL Server, MongoDB, Windows Server, Bloomberg, Excel / VBA"
+
+  - title: "Multi Asset and Solutions Technologist, Vice President"
+    org: "Risklab GmbH, Frankfurt am Main"
+    start: "January 2017"
+    end: "June 2017"
+    description: ""
+    bullets:
+      - "Analyze Risk Management Overlay PM infrastructure and devise a plan to consolidate it with the Risklab overlay infrastructure, especially the control sheet"
+      - "Establish a new software development stack and setup (knowledge management, versioning, development, etc.)"
+      - "Introduce dedicated Back Office feeds related to benchmark and fund performances"
+      - "Help drive the team Target Operating Model (TOM) project."
+    soft_skills:
+      - Coordination
+      - Business Analysis
+      - Project Management
+      - Presentation
+      - Strict Delivery
+    investment_skills:
+      - Risk Management
+      - Overlay Strategies
+      - Hedge Baskets
+      - Asset Allocation
+    project_methodology: "Kanban / Waterfall"
+    tech_stack:
+      - "MATLAB, C#, C++, MongoDB, MS SQL Server, Excel / VBA"
+
+  - title: "Co-Founder & CEO"
+    org: "hustoo UG, Munich"
+    start: "January 2012"
+    end: "December 2016"
+    description: "hustoo team built a technological ecosystem to tackle several inefficiencies of restaurant platforms by connecting both consumers and restaurant owners to serve best the interests of both sides. We aimed to offer an integrated platform to cover the full spectrum of issues faced by both restaurants and consumers."
+    bullets: []
+    soft_skills:
+      - Business Analysis
+      - Project Management
+      - Presentation
+      - Sales
+      - Strategy
+    tech_stack:
+      - "Angular, AWS (Batch, Lambda, S3, SNS), ElasticSearch, LogStash, Scala, Play Framework, Python, Postgres"
+
+  - title: "Chief Architect, Associate"
+    org: "Risklab GmbH, Munich"
+    start: "January 2012"
+    end: "December 2016"
+    description: "Designing, building and operating an infrastructure for managing investment strategies and the corresponding mandates. The mandates and the corresponding investment strategies ranged from highly complex continuously monitored dynamic strategies to one-off SAAs (Static Asset Allocations)."
+    bullets: []
+    soft_skills:
+      - Coordination
+      - Business Analysis
+      - Project Management
+      - Presentation
+      - Innovation
+    investment_skills:
+      - Investment Strategies
+      - Alternative Investments
+      - Strategic Asset Allocation
+    tech_stack:
+      - "C#, MATLAB, CUDA (GPUs), Excel / VBA, Windows Server, MS SQL Server (SSRS, SSIS), MongoDB, TeamCity, BitBucket, Confluence"
+
+  - title: "Financial Engineer, Associate"
+    org: "Investment & Risk Strategies, Munich"
+    start: "January 2010"
+    end: "December 2011"
+    description: "Designing, building and operating an infrastructure for risk reporting and monitoring. The infrastructure enabled handling portfolio data ETL tasks (holdings, market data, performance data, etc.), running risk factor forward-looking simulations, running forward-looking instrument pricing, risk figures computation and aggregation, report design and generation."
+    bullets: []
+    soft_skills:
+      - Coordination
+      - Business Analysis
+      - Project Management
+      - Presentation
+      - Strict Delivery
+    investment_skills:
+      - Risk Reporting
+      - Financial Data
+      - Risk Factor Simulation
+      - Financial Engineering
+      - Sensitivity Analysis
+    tech_stack:
+      - "C#, C++, MATLAB, CUDA (GPUs), Excel / VBA, Microsoft HPC, Windows Server, MS SQL Server (SSIS, SSRS), TeamCity, Git"
+
+  - title: "Software Engineer, Analyst"
+    org: "Financial Software & Technologies, Risklab GmbH, Munich"
+    start: "January 2009"
+    end: "December 2009"
+    description: "Designing and implementing an advanced unified and centralized financial pricing engine following a Service-Oriented Architecture (SOA)."
+    bullets: []
+    investment_skills:
+      - Financial Engineering
+    tech_stack:
+      - "C#, C++, MATLAB, CUDA (GPUs), R, Excel / VBA, Git, Subversion, Quantlib, MKL, ILNumerics, Blazor, ASP.NET Web, WCF, WPF"
+    soft_skills: []
+
+  - title: "Working Student & Master Thesis"
+    org: "Risklab GmbH, Munich"
+    start: "August 2007"
+    end: "December 2008"
+    description: "Master Thesis Title: Economic Scenario Generators: Calibration, Simulation and Comparison from an ALM Perspective"
+    bullets: []
+    investment_skills:
+      - Economic Scenario Modelling and Simulation
+      - Monte Carlo Methods
+      - Stochastic Differential Equations
+    tech_stack:
+      - "C#, C++, MATLAB, CUDA (GPUs), Excel / VBA, Git, MKL, ILNumerics, ASP.NET, WCF, WPF"
+    soft_skills: []
+
+  - title: "Student Research Assistant"
+    org: "Vodafone R&D, Munich"
+    start: "November 2006"
+    end: "September 2007"
+    description: "Contributed to development a prototype for a road-usage charging application that is operable across Europe and suitable for regional service providers. This system relies on an onboard unit (OBU) that uses GPS to determine a vehicle's position and speed in chargeable areas, complemented by a GSM/GPRS module for communication and a geographical information database."
+    bullets: []
+    telecom_skills:
+      - GPS
+      - Cellular Networks
+      - Triangulation
+      - "Mobile / Cellular Data"
+    tech_stack:
+      - "MATLAB, Simulink, C, Git, Google Earth, Geo Data (GIS)"
+    soft_skills: []
+
+education:
+  - degree: "Computational Science & Engineering"
+    institution: "Technische Universitat Munchen (TUM)"
+    start: "September 2006"
+    end: "December 2008"
+    description: "Focus areas: Financial Engineering, High Performance Computing (HPC)"
+    details: "CSE is an interdisciplinary field that integrates applied mathematics, computer science, and science/engineering disciplines. Its core aim is to create efficient tools and methods for numerical simulation, offering an alternative to solely relying on theory and experiments. Mastery in CSE demands proficiency in mathematical modeling, numerical analysis, algorithm development, computer system knowledge, software creation, result validation, and data visualization."
+
+  - degree: "Postgraduate Diploma in Management, Management of Technology"
+    institution: "ESMT Berlin"
+    start: "2015"
+    end: "2017"
+    description: "Program covered key areas in leadership and general management. The curriculum consisted of three tracks: Leadership and Social Responsibility, Managing Technology, and General Management. The diploma caters to experienced managers and serves as a career advancement tool for individuals."
+    details: ""
+
+  - degree: "Academic Exchange, Mathematics and Computer Science"
+    institution: "The George Washington University (GWU), Washington, D.C."
+    start: "2004"
+    end: "2004"
+    description: "Straight As. Courses included 3D Game Development and Discrete Mathematics."
+    details: ""
+
+  - degree: "Bachelor of Science, Computer Science"
+    institution: "Al Akhawayn University in Ifrane (AUI), Ifrane, Morocco"
+    start: "2001"
+    end: "2006"
+    description: "Graduated with Honors and with highest GPA for Engineering School"
+    details: ""
+
+volunteering:
+  - title: "Finance Coach"
+    org: "My Finance Coach Stiftung GmbH, Munich"
+    start: "January 2011"
+    end: "January 2017"
+    description: "Teach children in school about the basics of personal finance and how to use it in daily life as well as introduce them to the basic notions of investment instruments and the risk associated with them."
+
+references: "References available upon request"
+
+certifications:
+  - name: "Winter School: Generative AI"
+    org: "UM6P, Morocco"
+    start: "February 2024"
+    end: "February 2024"
+    description: "Our winter data science school focuses on Generative AI. Our main goals are to provide a deep understanding of generative AI techniques, foster collaboration and networking, promote practical skills."
+
+  - name: "Chartered Alternative Investment Analyst (CAIA)"
+    org: ""
+    start: "November 2019"
+    end: "Present"
+    description: "For over two decades, the CAIA Charter Program has been a proven learning option for client-focused fiduciaries who want to develop a deeper understanding of alternative investments - ultimately driving the stewardship of financial markets."
+
+publications:
+  - title: "Modeling and pricing of credit derivatives using macroeconomic information"
+    year: 2009
+    venue: "Journal of Financial Transformation"
+
+  - title: "High Performance Computing and Economic Scenario Generation: Integrating Expert Forecasts into Plane Price Modeling"
+    year: 2010
+    venue: "Euro-Par 2010 Parallel Processing Workshops"

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:beyond-bookings.com)",
+      "WebFetch(domain:flowistic.ai)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nadd BeyondBookings proposal: effort estimation, generator script, and branded Word doc\n\nModular delivery structure \\(Core + Variants A/B/C\\) with tiered pricing,\nfive packaging options, and detailed task breakdowns for invoice automation,\npayment automation, CFO consolidation, and client portal.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(python projects/flowistic/generate_beschluss.py:*)",
+      "Bash(textutil:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(pip --version:*)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3:*)",
+      "Bash(chmod:*)",
+      "Bash(uv:*)",
+      "Bash(open:*)"
+    ]
+  }
+}
