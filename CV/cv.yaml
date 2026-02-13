@@ -68,23 +68,23 @@ experience:
     org: "Trianel GmbH, Aachen / Remote"
     start: "November 2025"
     end: "Present"
-    description: "Triumph — Next-generation algorithmic energy trading platform replacing the legacy Algoframework with a modular, event-driven architecture for automated intraday trading on EPEX Spot, starting with SDAT cross-zonal arbitrage across German TSO areas."
+    description: "Trianel's next-generation algorithmic energy trading platform replacing the legacy algo trading framework with a modular, event-driven architecture for automated intraday trading on EPEX Spot."
     bullets:
       - "Architected and implemented the end-to-end trading pipeline: market data ingress (RabbitMQ), signal computation, strategy evaluation, risk management (4-check gate + kill switch), and order execution via iTrade REST API"
       - "Designed protocol-based, store-agnostic component architecture enabling backend swaps (Redis to Azure Event Hubs) without code changes"
       - "Built a decoupled signal layer with background calculation, Redis persistence, and SignalBundle aggregation — allowing signals to be tracked and evaluated independently of trading strategies"
-      - "Developed a full market emulator for reproducible E2E testing and risk-free strategy validation, eliminating dependency on live SDAT trading windows"
+      - "Developed a full market emulator for reproducible E2E testing and risk-free strategy validations"
       - "Implemented Redis-backed state management (OrderBook, TradeJournal, ContractPositions, Sessions) with Lua scripts for atomic operations and crash-resilient persistence"
       - "Created CLI tooling (Typer) and REST API (FastAPI) for operations, configuration, and real-time system control including remote kill switch"
       - "Authored the MVP specification and roadmap document for stakeholder approval, covering architecture rationale, cost-benefit analysis, and phased rollout plan"
-      - "Established testing culture: 470+ unit tests, ~5s runtime, protocol-based mocking patterns"
+      - "Established testing and engineering culture"
       - "Conducted code reviews and collaborated on Epic scoping (Signal Layer, Decision Layer, Risk Layer, Execution, Configuration Management)"
     soft_skills:
       - Technical Leadership
       - Stakeholder Communication
       - Autonomous Consulting Delivery
       - Code Review & Mentoring
-      - Epic-level Planning
+      - Agile Planning & Development
     investment_skills:
       - "EPEX Spot Intraday Trading"
       - "SDAT Cross-Zonal Arbitrage"
@@ -92,8 +92,8 @@ experience:
       - "Order Book Mechanics"
       - "Risk Limits & Kill Switch"
     tech_stack:
-      - "Python 3.12+, FastAPI, RabbitMQ (AMQP), Redis (Pub/Sub, Lua scripting), PostgreSQL, InfluxDB, Pydantic, Typer, Docker, uv, pytest, Ruff"
-    tools_platforms: "Confluence, Bitbucket"
+      - "Python 3.14+, FastAPI, RabbitMQ (AMQP), Redis (Pub/Sub, Lua scripting), PostgreSQL, InfluxDB, Pydantic, Typer, Docker, uv, pytest, Ruff"
+    tools_platforms: "Confluence, Bitbucket, Jira, VS Code"
 
   - title: "Tech Lead / Full Stack Developer"
     org: "Flowistic GmbH, Frankfurt am Main"
