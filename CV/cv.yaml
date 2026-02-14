@@ -1,5 +1,5 @@
 name: "Fayssal El Mofatiche, CAIA"
-title: "Financial Services and Technology (HPC/AI/Big Data) expert, tech lead, project manager, Full-Stack Developer, Senior Business Analyst, coach / trainer"
+title: "Financial Services & Technology (HPC/AI/Big Data) Expert, Tech Lead, Project Manager, Full-Stack Developer, Senior Business Analyst, Coach & Trainer"
 photo: "assets/profile.jpeg"
 
 contact:
@@ -43,13 +43,13 @@ skills:
       level: professional
 
 profile: |
-  Technical leader and investment expert with 14+ years of advanced software engineering experience focused on but not limited to investment and quantitative challenges in asset management. Proven expertise in managing, architecting and developing major investment solutions with relevant stakeholders management and regular reporting and pitching to C-Level executives. Delivered platforms used to manage 100s of billions in AuMs. Passionate about the synergies between finance, data and software. Pioneered multi-year learning initiatives with 100s of participants to bridge the skill gap between business and technology. Experienced Python & Data Science trainer with focus on application to finance. Fayssal pioneered lately the first FinTech Developer event in Germany: finteda.com
+  Technical leader and investment expert with 14+ years of advanced software engineering experience, specializing in investment and quantitative challenges in asset management. Proven expertise in managing, architecting, and developing major investment solutions with effective stakeholder management and regular reporting to C-Level executives. Delivered platforms managing hundreds of billions in AuM. Passionate about bridging finance, data, and software. Pioneered multi-year learning initiatives with hundreds of participants to close the skill gap between business and technology. Experienced Python & Data Science trainer with a focus on financial applications. Founder of Germany's first FinTech Developer event: finteda.com
 
 testimonials:
   - name: "Dr. Matthias Mueller"
     role: "CIO Europe"
     org: "Multi Asset Investment, Allianz Global Investors"
-    quote: "...Mr. El Mofatiche possesses excellent specialist knowledge extending far beyond the mainstream [...]. His exceptional creativity has helped him to find new and helpful solutions matching the problem at hand. He impressed with his exceptional technical understanding, which allowed him to find workable solutions for difficult constellations at any time."
+    quote: "Mr. El Mofatiche possesses excellent specialist knowledge extending far beyond the mainstream. His exceptional creativity has helped him find new and effective solutions matching the problem at hand. He impressed with his outstanding technical understanding, which allowed him to deliver workable solutions for difficult constellations at any time."
 
 experience:
   - title: "Author"
@@ -58,9 +58,9 @@ experience:
     end: "Q2 2026 (forthcoming)"
     description: "Book: Building AI Agents in Finance"
     bullets:
-      - "Upcoming publication with Packt, focused on practical applications of AI agents in financial services."
-      - "Covers architecture, design patterns, compliance considerations, and real-world case studies."
-      - "Target audience: Investment professionals, quantitative analysts, FinTech professionals and AI practitioners."
+      - "Publication with Packt on practical applications of AI agents in financial services."
+      - "Covers agent architecture, design patterns, compliance considerations, and real-world case studies."
+      - "Target audience: investment professionals, quantitative analysts, FinTech professionals, and AI practitioners."
     tech_stack: []
     soft_skills: []
 
@@ -68,17 +68,17 @@ experience:
     org: "Trianel GmbH, Aachen / Remote"
     start: "November 2025"
     end: "Present"
-    description: "Trianel's next-generation algorithmic energy trading platform replacing the legacy algo trading framework with a modular, event-driven architecture for automated intraday trading on EPEX Spot."
+    description: "Next-generation algorithmic energy trading platform replacing the legacy framework with a modular, event-driven architecture for automated intraday trading on EPEX Spot."
     bullets:
-      - "Architected and implemented the end-to-end trading pipeline: market data ingress (RabbitMQ), signal computation, strategy evaluation, risk management (4-check gate + kill switch), and order execution via iTrade REST API"
-      - "Designed protocol-based, store-agnostic component architecture enabling backend swaps (Redis to Azure Event Hubs) without code changes"
-      - "Built a decoupled signal layer with background calculation, Redis persistence, and SignalBundle aggregation — allowing signals to be tracked and evaluated independently of trading strategies"
-      - "Developed a full market emulator for reproducible E2E testing and risk-free strategy validations"
-      - "Implemented Redis-backed state management (OrderBook, TradeJournal, ContractPositions, Sessions) with Lua scripts for atomic operations and crash-resilient persistence"
-      - "Created CLI tooling (Typer) and REST API (FastAPI) for operations, configuration, and real-time system control including remote kill switch"
-      - "Authored the MVP specification and roadmap document for stakeholder approval, covering architecture rationale, cost-benefit analysis, and phased rollout plan"
-      - "Established testing and engineering culture"
-      - "Conducted code reviews and collaborated on Epic scoping (Signal Layer, Decision Layer, Risk Layer, Execution, Configuration Management)"
+      - "Architected and implemented the end-to-end trading pipeline: market data ingress (RabbitMQ), signal computation, strategy evaluation, risk management (4-check gate + kill switch), and order execution via iTrade REST API."
+      - "Designed a protocol-based, store-agnostic component architecture enabling backend swaps (Redis to Azure Event Hubs) without code changes."
+      - "Built a decoupled signal layer with background calculation, Redis persistence, and SignalBundle aggregation, enabling signals to be tracked and evaluated independently of trading strategies."
+      - "Developed a full market emulator for reproducible E2E testing and risk-free strategy validation."
+      - "Implemented Redis-backed state management (OrderBook, TradeJournal, ContractPositions, Sessions) with Lua scripts for atomic operations and crash-resilient persistence."
+      - "Created CLI tooling (Typer) and REST API (FastAPI) for operations, configuration, and real-time system control including remote kill switch."
+      - "Authored the MVP specification and roadmap document for stakeholder approval, covering architecture rationale, cost-benefit analysis, and phased rollout plan."
+      - "Established testing and engineering culture across the team."
+      - "Conducted code reviews and collaborated on Epic scoping (Signal Layer, Decision Layer, Risk Layer, Execution, Configuration Management)."
     soft_skills:
       - Technical Leadership
       - Stakeholder Communication
@@ -101,14 +101,14 @@ experience:
     end: "Present"
     description: "Termflow"
     bullets:
-      - "Platform: AI-powered investment term sheet generation & validation platform for asset managers, VCs, PEs and legal teams"
-      - "Backend: FastAPI, PostgreSQL, MongoDB, S3, Pydantic, Celery"
-      - "Frontend: React, Tailwind CSS, Slate.js, TypeScript"
-      - "AI Components: Modular AI agents (Legal, Risk, Compliance, Sanity) powered by GPT-4o, Claude 3"
-      - "Features: Clause editor, multi-agent validation, export (PDF/DOCX), JSON schema, version control"
-      - "API & Integration: REST API with OpenAPI docs, webhooks, role-based access, SSO"
-      - "Smart Contracts: Generates smart contract-ready term sheets for structured finance and OTC products (bonds, swaps, credit derivatives)"
-      - "DevOps: Docker, CI/CD, GitHub Actions, staging on Render/Fly.io"
+      - "Platform: AI-powered investment term sheet generation and validation platform for asset managers, VCs, PEs, and legal teams."
+      - "Backend: FastAPI, PostgreSQL, MongoDB, S3, Pydantic, Celery."
+      - "Frontend: React, Tailwind CSS, Slate.js, TypeScript."
+      - "AI Components: Modular AI agents (Legal, Risk, Compliance, Sanity) powered by GPT-4o and Claude 3."
+      - "Features: Clause editor, multi-agent validation, export (PDF/DOCX), JSON schema, version control."
+      - "API & Integration: REST API with OpenAPI docs, webhooks, role-based access, SSO."
+      - "Smart Contracts: Generates smart contract-ready term sheets for structured finance and OTC products (bonds, swaps, credit derivatives)."
+      - "DevOps: Docker, CI/CD, GitHub Actions, staging on Render/Fly.io."
     tech_stack: []
     soft_skills: []
 
@@ -118,14 +118,14 @@ experience:
     end: "January 2026"
     description: "YieldFlow"
     bullets:
-      - "Platform: Professional financial analytics platform for dividend analysis"
-      - "Backend: FastAPI, PostgreSQL/SQLite, Redis, Celery, SQLAlchemy"
-      - "Frontend: React 19, TypeScript, Material-UI 7, Recharts"
-      - "AI Components: Multi-LLM ensemble (GPT-4, Claude-3, Gemini), Scikit-learn"
-      - "Data Sources: Yahoo Finance, Alpha Vantage, FMP, FRED"
-      - "Features: Real-time data integration, dividend analysis, growth forecasting"
-      - "Visualization: Interactive charts for growth trends and peer comparisons"
-      - "DevOps: Docker, UV package manager, Sentry"
+      - "Platform: Professional financial analytics platform for dividend analysis."
+      - "Backend: FastAPI, PostgreSQL/SQLite, Redis, Celery, SQLAlchemy."
+      - "Frontend: React 19, TypeScript, Material-UI 7, Recharts."
+      - "AI Components: Multi-LLM ensemble (GPT-4, Claude-3, Gemini), Scikit-learn."
+      - "Data Sources: Yahoo Finance, Alpha Vantage, FMP, FRED."
+      - "Features: Real-time data integration, dividend analysis, growth forecasting."
+      - "Visualization: Interactive charts for growth trends and peer comparisons."
+      - "DevOps: Docker, UV package manager, Sentry."
     tech_stack: []
     soft_skills: []
 
@@ -147,20 +147,20 @@ experience:
     end: "November 2025"
     description: ""
     bullets:
-      - "Features integration and testing for impact on forecasting ML models"
-      - "Data transformation pipelines in python (pandas, polars, pyspark)"
-      - "Design and programming of ML models for time series forecasting (Demand forecast) (Scikit-Learn, Tensorflow, Pytorch)"
-      - "Versioning and CI/CD with Gitlab"
-      - "Data analysis & validation (matplotlib, plotly)"
-      - "Web Scraping (BeautifulSoup, Selenium)"
-      - "Building of dashboards in plotly Dash (Dash, Core Components, Bootstrap / Mantine Components, SQLAlchemy, Pydantic, Flask)"
-      - "Extraction of features from text using NLP (Langchain, Spacy, Azure OpenAI)"
-      - "Data analysis reports (Power BI)"
-      - "Explainable ML / AI (Shapely Values, Double ML)"
-      - "GenAI (General)"
+      - "Feature integration and impact testing on ML forecasting models."
+      - "Data transformation pipelines in Python (Pandas, Polars, PySpark)."
+      - "Design and implementation of ML models for time series forecasting and demand forecasting (Scikit-Learn, TensorFlow, PyTorch)."
+      - "Versioning and CI/CD with GitLab."
+      - "Data analysis and validation (Matplotlib, Plotly)."
+      - "Web scraping (BeautifulSoup, Selenium)."
+      - "Dashboard development with Plotly Dash (Core Components, Bootstrap/Mantine Components, SQLAlchemy, Pydantic, Flask)."
+      - "Feature extraction from text using NLP (LangChain, spaCy, Azure OpenAI)."
+      - "Data analysis reporting (Power BI)."
+      - "Explainable ML/AI (SHAP Values, Double ML)."
+      - "Generative AI applications."
     soft_skills:
       - Presentation
-      - "Cross-functional coordination across Sales & Marketing as well as Production / Manufacturing teams"
+      - "Cross-functional coordination across Sales, Marketing, and Production/Manufacturing teams"
     tech_stack:
       - "Gitlab, Azure Data Factory, PowerBI, Kubernetes, Docker, Spark"
 
@@ -170,11 +170,11 @@ experience:
     end: "May 2025"
     description: ""
     bullets:
-      - "REST API development with Python and Flask of an advanced (Machine Learning) Greylist Generator for bank wide EUC application assessment, analysis, and regular reporting in line with BAIT / DORA regulation."
+      - "Developed a REST API with Python and Flask for an ML-based Greylist Generator enabling bank-wide EUC application assessment, analysis, and regulatory reporting in line with BAIT/DORA."
       - "Code review, testing, documentation, and maintenance."
-      - "Report automation."
-      - "Coordination with database, SharePoint, and Big Data / AI teams"
-      - "Regular progress reporting to project stakeholders"
+      - "Automated reporting workflows."
+      - "Coordinated with database, SharePoint, and Big Data/AI teams."
+      - "Regular progress reporting to project stakeholders."
     soft_skills: []
     tech_stack:
       - "Python, Flask, Pandas, Polars, Scikit-Learn (Random Forest), SQLAlchemy, Pydantic, SQL"
@@ -187,10 +187,10 @@ experience:
     end: "June 2025"
     description: "Professional trainer for modern data analysis skills for financial teams and platform developer."
     bullets:
-      - "Python for finance incl. data analysis, data visualization and machine learning, as well as software development best practices such as Clean Code"
-      - "SQL and business intelligence"
-      - "Generative AI / LLMs"
-      - "Cloud Computing with Databricks for Finance"
+      - "Python for Finance including data analysis, visualization, machine learning, and software development best practices (Clean Code)."
+      - "SQL and Business Intelligence."
+      - "Generative AI / LLMs."
+      - "Cloud Computing with Databricks for Finance."
     soft_skills:
       - Presentation
       - Persuasion
@@ -208,7 +208,7 @@ experience:
     org: "QuantMinds International, London"
     start: "November 2023"
     end: "November 2023"
-    description: "Chairing the Large Language Models (LLMs) and Advanced Machine Learning Summit of 2023's QuantMinds International, one of the most renowned finance conferences, in London between 13th and 16th of November"
+    description: "Chaired the Large Language Models (LLMs) and Advanced Machine Learning Summit at QuantMinds International 2023, one of the most renowned quantitative finance conferences, in London."
     bullets:
       - "https://informaconnect.com/quantminds-international/speakers/fayssal-el-mofatiche/"
     tech_stack: []
@@ -218,7 +218,7 @@ experience:
     org: "Allianz Global Investors, Frankfurt am Main"
     start: "October 2023"
     end: "January 2024"
-    description: "A 5 modules Python training tailored to investment professionals. The modules cover the basics of Python, data analysis and visualization, investing with Python, application life cycle like clean code and deployment, and end-to-end team collaboration and co-creation stack."
+    description: "Five-module Python training tailored to investment professionals, covering Python fundamentals, data analysis and visualization, investing with Python, application lifecycle (Clean Code, deployment), and end-to-end team collaboration."
     bullets:
       - "https://investeracy.com/training/python-4-investment/"
     investment_skills:
@@ -236,11 +236,11 @@ experience:
     end: "February 2024"
     description: ""
     bullets:
-      - "Customized and modern Back Office risk reporting and controlling platform."
-      - "Open architecture through dedicated REST APIs to allow for introducing further modules and integrations."
-      - "Consolidation and complexity reduction of data providers and interfaces, especially for market data and banking interfaces."
-      - "Technically leading the design and development of the prototype and SaaS transformation."
-      - "Coordination with respective Family Office stakeholders and development team."
+      - "Built a modern Back Office risk reporting and controlling platform."
+      - "Designed an open architecture with dedicated REST APIs for modular extensibility and third-party integrations."
+      - "Consolidated and simplified data providers and interfaces, particularly for market data and banking connectivity."
+      - "Led the technical design and development of the prototype and SaaS transformation."
+      - "Coordinated with Family Office stakeholders and the development team."
     investment_skills:
       - Wealth Management Workflow
       - Asset Controlling
@@ -256,7 +256,7 @@ experience:
     org: "Flowistic GmbH, Frankfurt am Main"
     start: "June 2023"
     end: "Present"
-    description: "Specializing in financial technology consulting, we focus on equipping teams, especially those in Front Office, Advisory, and Sustainability areas, with advanced solutions to their data and technology challenges. Our mission is to transform complex data-driven problems into opportunities for innovation and efficiency, tailoring our services and expertise, e.g. using AI / ML approaches, to meet each team's unique needs."
+    description: "Financial technology consultancy equipping Front Office, Advisory, and Sustainability teams with advanced data and technology solutions. Transforming complex data-driven challenges into opportunities for innovation and efficiency through tailored AI/ML approaches."
     bullets: []
     soft_skills:
       - Presentation
@@ -286,12 +286,12 @@ experience:
     end: "June 2023"
     description: ""
     bullets:
-      - "Improve operational stability of the centerpiece engine for signal generation for Multi Asset investment strategies, most of which are quantitative."
-      - "Align with Platform team, Multi Asset team PMs, Multi Asset Quantitative R&D Team and Multi Asset senior management."
-      - "Consolidate a unified development plan for signal generation and improve code quality using best practices like clean code."
-      - "Establish a future roadmap for signal generation."
-      - "Enhance signal generation infrastructure with monitoring and analytical components"
-      - "Better leverage generated signals through reports and analytics"
+      - "Improved operational stability of the core signal generation engine for Multi Asset investment strategies, most of which are quantitative."
+      - "Aligned with Platform team, Multi Asset PMs, Quantitative R&D, and senior management."
+      - "Consolidated a unified development plan for signal generation and improved code quality through Clean Code best practices."
+      - "Established a future roadmap for signal generation."
+      - "Enhanced signal generation infrastructure with monitoring and analytical components."
+      - "Improved signal utilization through dedicated reports and analytics."
     soft_skills:
       - Presentation
       - Coordination & Alignment
@@ -312,13 +312,13 @@ experience:
     end: "September 2022"
     description: ""
     bullets:
-      - "Platform managed 150+ bn Multi Asset AuMs, expanding to 250 bn with Fixed Income & Trading adoption."
-      - "Met 5 critical Group-level regulatory (KAIT) audit deadlines over 2 years while adhering to software development practices related to clean code, DevOps and InfoSec."
-      - "Introduced agile cross-functional teams and a new role for investment engineers working at the intersection of investment and software engineering."
+      - "Platform managed 150+ bn Multi Asset AuM, expanding to 250 bn with Fixed Income and Trading adoption."
+      - "Met 5 critical Group-level regulatory (KAIT) audit deadlines over 2 years while maintaining Clean Code, DevOps, and InfoSec standards."
+      - "Introduced agile cross-functional teams and a new Investment Engineer role at the intersection of investment and software engineering."
       - "Replaced 50+ legacy business-managed applications with a modern cloud-native investment platform."
-      - "Project management incl. reporting and pitching regularly to C-Level senior management."
-      - "Regularly recruited more than 15 internal & external specialists."
-      - "Collaboration through multiple departments and stakeholders like Investment, IT, Risk, and Compliance."
+      - "Project management including regular reporting and pitching to C-Level senior management."
+      - "Recruited and onboarded 15+ internal and external specialists."
+      - "Collaborated across Investment, IT, Risk, and Compliance departments."
     soft_skills:
       - Technical Leadership
       - Presentation
@@ -347,7 +347,7 @@ experience:
     org: "Allianz GI, Frankfurt am Main"
     start: "June 2019"
     end: "September 2022"
-    description: "Launched a 'Learncast' initiative, offering bi-weekly tutorials on subjects like investment and programming. This included series on Machine Learning in Asset Management using Python. The community attracted 400+ professionals across all functions, especially investment and technology. The initiative was highly praised by peers and C-Level executives."
+    description: "Launched the 'Learncast' initiative with bi-weekly tutorials on investment and programming, including a series on Machine Learning in Asset Management with Python. The community attracted 400+ professionals across all functions, particularly investment and technology. Highly praised by peers and C-Level executives."
     bullets: []
     soft_skills:
       - Teaching
@@ -363,8 +363,8 @@ experience:
     end: "May 2020"
     description: ""
     bullets:
-      - "Co-founded a Multi Asset group for Investment Engineering to architect and push forward the global Multi Asset investment applications to the next level across the different steps of the investment process and the different investment strategies."
-      - "Created/architected and pitched the first blueprint for the new Multi Asset infrastructure strategy to senior management."
+      - "Co-founded a Multi Asset Investment Engineering group to architect and advance the global Multi Asset investment applications across all stages of the investment process."
+      - "Created and pitched the first blueprint for the new Multi Asset infrastructure strategy to senior management."
     soft_skills:
       - Presentation & Pitching
       - Coordination
@@ -383,9 +383,9 @@ experience:
     end: "March 2019"
     description: ""
     bullets:
-      - "Architected, designed and built an investment infrastructure to manage Risk Management Overlay mandates of over 50 billions EUR at the time."
-      - "Infrastructure included a SQL database, a C# backend, and a control sheet for strategy allocation using MATLAB and Excel/VBA. A management sheet and a hedge basket tool were also used."
-      - "Later on, distributed Python-based tools were introduced for tail-risk hedging."
+      - "Architected, designed, and built an investment infrastructure to manage Risk Management Overlay mandates of over EUR 50 billion."
+      - "Infrastructure comprised a SQL database, C# backend, and strategy allocation control sheet (MATLAB, Excel/VBA), complemented by a management sheet and hedge basket tool."
+      - "Introduced distributed Python-based tools for tail-risk hedging."
     soft_skills:
       - Presentation
       - Simplification of Complex Concepts
@@ -413,10 +413,10 @@ experience:
     end: "June 2017"
     description: ""
     bullets:
-      - "Analyze Risk Management Overlay PM infrastructure and devise a plan to consolidate it with the Risklab overlay infrastructure, especially the control sheet"
-      - "Establish a new software development stack and setup (knowledge management, versioning, development, etc.)"
-      - "Introduce dedicated Back Office feeds related to benchmark and fund performances"
-      - "Help drive the team Target Operating Model (TOM) project."
+      - "Analyzed Risk Management Overlay PM infrastructure and devised a consolidation plan with the Risklab overlay infrastructure."
+      - "Established a new software development stack and setup (knowledge management, versioning, development)."
+      - "Introduced dedicated Back Office feeds for benchmark and fund performance data."
+      - "Drove the team Target Operating Model (TOM) project."
     soft_skills:
       - Coordination
       - Business Analysis
@@ -436,7 +436,7 @@ experience:
     org: "hustoo UG, Munich"
     start: "January 2012"
     end: "December 2016"
-    description: "hustoo team built a technological ecosystem to tackle several inefficiencies of restaurant platforms by connecting both consumers and restaurant owners to serve best the interests of both sides. We aimed to offer an integrated platform to cover the full spectrum of issues faced by both restaurants and consumers."
+    description: "Built a technological ecosystem connecting consumers and restaurant owners to address inefficiencies in existing restaurant platforms. Delivered an integrated platform covering the full spectrum of needs for both restaurants and consumers."
     bullets: []
     soft_skills:
       - Business Analysis
@@ -451,7 +451,7 @@ experience:
     org: "Risklab GmbH, Munich"
     start: "January 2012"
     end: "December 2016"
-    description: "Designing, building and operating an infrastructure for managing investment strategies and the corresponding mandates. The mandates and the corresponding investment strategies ranged from highly complex continuously monitored dynamic strategies to one-off SAAs (Static Asset Allocations)."
+    description: "Designed, built, and operated an infrastructure for managing investment strategies and mandates, ranging from highly complex, continuously monitored dynamic strategies to one-off Static Asset Allocations (SAAs)."
     bullets: []
     soft_skills:
       - Coordination
@@ -470,7 +470,7 @@ experience:
     org: "Investment & Risk Strategies, Munich"
     start: "January 2010"
     end: "December 2011"
-    description: "Designing, building and operating an infrastructure for risk reporting and monitoring. The infrastructure enabled handling portfolio data ETL tasks (holdings, market data, performance data, etc.), running risk factor forward-looking simulations, running forward-looking instrument pricing, risk figures computation and aggregation, report design and generation."
+    description: "Designed, built, and operated a risk reporting and monitoring infrastructure. Handled portfolio data ETL (holdings, market data, performance), forward-looking risk factor simulations, instrument pricing, risk figure computation and aggregation, and report generation."
     bullets: []
     soft_skills:
       - Coordination
@@ -491,7 +491,7 @@ experience:
     org: "Financial Software & Technologies, Risklab GmbH, Munich"
     start: "January 2009"
     end: "December 2009"
-    description: "Designing and implementing an advanced unified and centralized financial pricing engine following a Service-Oriented Architecture (SOA)."
+    description: "Designed and implemented a unified, centralized financial pricing engine following a Service-Oriented Architecture (SOA)."
     bullets: []
     investment_skills:
       - Financial Engineering
@@ -517,7 +517,7 @@ experience:
     org: "Vodafone R&D, Munich"
     start: "November 2006"
     end: "September 2007"
-    description: "Contributed to development a prototype for a road-usage charging application that is operable across Europe and suitable for regional service providers. This system relies on an onboard unit (OBU) that uses GPS to determine a vehicle's position and speed in chargeable areas, complemented by a GSM/GPRS module for communication and a geographical information database."
+    description: "Contributed to developing a prototype for a pan-European road-usage charging application. The system relies on an onboard unit (OBU) using GPS for vehicle positioning in chargeable areas, complemented by a GSM/GPRS communication module and a geographic information database."
     bullets: []
     telecom_skills:
       - GPS
@@ -534,20 +534,20 @@ education:
     start: "September 2006"
     end: "December 2008"
     description: "Focus areas: Financial Engineering, High Performance Computing (HPC)"
-    details: "CSE is an interdisciplinary field that integrates applied mathematics, computer science, and science/engineering disciplines. Its core aim is to create efficient tools and methods for numerical simulation, offering an alternative to solely relying on theory and experiments. Mastery in CSE demands proficiency in mathematical modeling, numerical analysis, algorithm development, computer system knowledge, software creation, result validation, and data visualization."
+    details: "Interdisciplinary program integrating applied mathematics, computer science, and engineering. Focus on efficient numerical simulation methods as an alternative to theory and experiments alone. Core competencies: mathematical modeling, numerical analysis, algorithm development, high-performance software engineering, and data visualization."
 
   - degree: "Postgraduate Diploma in Management, Management of Technology"
     institution: "ESMT Berlin"
     start: "2015"
     end: "2017"
-    description: "Program covered key areas in leadership and general management. The curriculum consisted of three tracks: Leadership and Social Responsibility, Managing Technology, and General Management. The diploma caters to experienced managers and serves as a career advancement tool for individuals."
+    description: "Executive program covering Leadership & Social Responsibility, Managing Technology, and General Management. Designed for experienced managers seeking career advancement."
     details: ""
 
   - degree: "Academic Exchange, Mathematics and Computer Science"
     institution: "The George Washington University (GWU), Washington, D.C."
     start: "2004"
     end: "2004"
-    description: "Straight As. Courses included 3D Game Development and Discrete Mathematics."
+    description: "Straight A's. Courses included 3D Game Development and Discrete Mathematics."
     details: ""
 
   - degree: "Bachelor of Science, Computer Science"
@@ -562,7 +562,7 @@ volunteering:
     org: "My Finance Coach Stiftung GmbH, Munich"
     start: "January 2011"
     end: "January 2017"
-    description: "Teach children in school about the basics of personal finance and how to use it in daily life as well as introduce them to the basic notions of investment instruments and the risk associated with them."
+    description: "Taught school children the basics of personal finance, everyday money management, and fundamental investment concepts including associated risks."
 
 references: "References available upon request"
 
@@ -571,13 +571,13 @@ certifications:
     org: "UM6P, Morocco"
     start: "February 2024"
     end: "February 2024"
-    description: "Our winter data science school focuses on Generative AI. Our main goals are to provide a deep understanding of generative AI techniques, foster collaboration and networking, promote practical skills."
+    description: "Intensive data science program on Generative AI covering deep understanding of generative techniques, practical skills development, and collaborative networking."
 
   - name: "Chartered Alternative Investment Analyst (CAIA)"
     org: ""
     start: "November 2019"
     end: "Present"
-    description: "For over two decades, the CAIA Charter Program has been a proven learning option for client-focused fiduciaries who want to develop a deeper understanding of alternative investments - ultimately driving the stewardship of financial markets."
+    description: "Global credential for professionals in alternative investments, covering hedge funds, private equity, real assets, and structured products."
 
 publications:
   - title: "Modeling and pricing of credit derivatives using macroeconomic information"
