@@ -1,5 +1,5 @@
 name: "Fayssal El Mofatiche, CAIA"
-title: "Financial Services and Technology (AI/Big Data) expert, tech lead, project manager, Full-Stack Developer, Senior Business Analyst, coach / trainer"
+title: "Financial Services and Technology (HPC/AI/Big Data) expert, tech lead, project manager, Full-Stack Developer, Senior Business Analyst, coach / trainer"
 photo: "assets/profile.jpeg"
 
 contact:
@@ -13,7 +13,7 @@ links:
     url: https://flowistic.ai
   - label: finteda.com
     url: https://finteda.com
-  - label: LinkedIn
+  - label: /in/fayssal-el-mofatiche
     url: https://www.linkedin.com/in/fayssal-el-mofatiche
 
 skills:
@@ -87,8 +87,8 @@ experience:
       - Agile Planning & Development
     investment_skills:
       - "EPEX Spot Intraday Trading"
-      - "SDAT Cross-Zonal Arbitrage"
-      - "Regelzonen (TSO Areas)"
+      - "Simulation & Backtesting"
+      - "Signal Generation & Strategy Evaluation"
       - "Order Book Mechanics"
       - "Risk Limits & Kill Switch"
     tech_stack:
@@ -115,7 +115,7 @@ experience:
   - title: "Tech Lead / Full Stack Developer"
     org: "Flowistic GmbH, Frankfurt am Main"
     start: "June 2025"
-    end: "Present"
+    end: "January 2026"
     description: "YieldFlow"
     bullets:
       - "Platform: Professional financial analytics platform for dividend analysis"

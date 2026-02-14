@@ -1,3 +1,4 @@
 output/*.docx
+output/*.pdf
 output/.cv_de_cache.yaml
 .venv/

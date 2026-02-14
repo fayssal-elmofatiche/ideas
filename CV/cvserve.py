@@ -127,9 +127,10 @@ def load_cv(yaml_path: Path) -> dict:
 
 # ── Translation via Claude API ──
 
-def translate_cv(cv: dict, use_cache: bool = False) -> dict:
-    """Translate CV content from English to German using Claude API."""
-    if use_cache and CACHE_FILE.exists():
+def translate_cv(cv: dict, retranslate: bool = False) -> dict:
+    """Translate CV content from English to German using Claude API.
+    Uses cached translation if available, unless retranslate is True."""
+    if not retranslate and CACHE_FILE.exists():
         print(f"Using cached translation from {CACHE_FILE}")
         return load_cv(CACHE_FILE)
 
@@ -141,7 +142,10 @@ def translate_cv(cv: dict, use_cache: bool = False) -> dict:
 
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("Error: ANTHROPIC_API_KEY environment variable not set.")
+        if CACHE_FILE.exists():
+            print("ANTHROPIC_API_KEY not set — falling back to cached translation.")
+            return load_cv(CACHE_FILE)
+        print("Error: ANTHROPIC_API_KEY not set and no cached translation found.")
         sys.exit(1)
 
     client = anthropic.Anthropic(api_key=api_key)
@@ -711,12 +715,16 @@ def main():
         help="Output language. Omit to generate both EN and DE.",
     )
     parser.add_argument(
-        "--cache", action="store_true",
-        help="Use cached German translation instead of calling the API.",
+        "--retranslate", action="store_true",
+        help="Force re-translation via Claude API (ignores cache).",
     )
     parser.add_argument(
         "--source", type=Path, default=DEFAULT_YAML,
         help=f"Path to source YAML (default: {DEFAULT_YAML})",
+    )
+    parser.add_argument(
+        "--pdf", action="store_true",
+        help="Also generate PDF from the Word documents.",
     )
     parser.add_argument(
         "--watch", action="store_true",
@@ -726,15 +734,25 @@ def main():
 
     langs = [args.lang] if args.lang else ["en", "de"]
 
+    def convert_to_pdf(docx_path: Path) -> Path:
+        """Convert a .docx file to PDF."""
+        from docx2pdf import convert
+        pdf_path = docx_path.with_suffix(".pdf")
+        convert(str(docx_path), str(pdf_path))
+        return pdf_path
+
     def do_build():
         cv_en = load_cv(args.source)
         outputs = []
         for lang in langs:
             cv = cv_en
             if lang == "de":
-                cv = translate_cv(cv_en, use_cache=args.cache)
+                cv = translate_cv(cv_en, retranslate=args.retranslate)
             output_path = build_docx(cv, lang)
             outputs.append(output_path)
+            if args.pdf:
+                pdf_path = convert_to_pdf(output_path)
+                outputs.append(pdf_path)
         return outputs
 
     def open_file(path):
