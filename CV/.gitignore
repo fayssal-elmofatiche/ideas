@@ -1,7 +1,9 @@
 # Build output
-output/*.docx
-output/*.pdf
-output/.cv_de_cache.yaml
+output/
+
+# Personal data (not shipped with the package)
+cv.yaml
+assets/profile.*
 
 # Python
 .venv/
