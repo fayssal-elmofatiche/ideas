@@ -226,6 +226,10 @@ raw features and a dependent series."
   MAE, Slope, Intercept, means). Export New Run / CSV. *(Observed example: a Mexico Food CPI MoM NSA index, TLA
   30-day lookback — r 0.52, R² 0.27, MAE 0.71, 201 obs.)*
 
+![MARCOS Index Construction — build an index from raw daily features (X) + a lower-frequency dependent series (Y); Method "TLA (correlation-weighted)", lookback 30d, with Use-lags / MAD-cleaning / MIDAS-transform toggles.](turnleaf-analytics-img/marcos-4-index-construction.png)
+
+![MARCOS Index Results — constructed daily index level, MoM-index-vs-dependent overlay, scatter, and univariate stats (r 0.52, R² 0.27, RMSE 0.89, MAE 0.71, 201 obs) for a Mexico Food CPI MoM NSA index.](turnleaf-analytics-img/marcos-5-index-results.png)
+
 **Step 3 — MARCOS → Pipeline: assemble the forecast pipeline.** Ordered, individually-toggleable steps:
 ① `dailyinputfileslite` (generates daily input files) → ② `dumpsnaplite` (creates forecast snapshot packets) →
 ③ `featurestores` (feature-engineering pipeline). Each step toggles on/off and runs independently; an **Output**
@@ -234,6 +238,8 @@ panel shows results.
 **Step 4 — Configure the forecast packet.** Per packet: **Country, Target (e.g. CPI), Season (NSA/SA),
 Var type (MoM/YoY), Ref year, Ref month, Forecast date, Proximity, Tenor 1…12** (per-horizon adjustments), with
 **+ Add packet** to batch multiple targets.
+
+![MARCOS Pipeline — toggleable steps (dailyinputfileslite → dumpsnaplite → featurestores) on the left, and the "Configure forecast packet" panel (Country / Target=CPI / Season=NSA / Var type=MoM / Ref year+month / Forecast date / Proximity / Tenor 1–12) on the right, with a "Run pipeline" action.](turnleaf-analytics-img/marcos-1-pipeline-and-packet.png)
 
 **Step 5 — MARCOS → Forecast: set the model & run** (`/forecast`). Two panels + **Run Forecast**:
 - **Payload** = the packet fields above.
@@ -246,11 +252,15 @@ Var type (MoM/YoY), Ref year, Ref month, Forecast date, Proximity, Tenor 1…12*
 - → **Run Summary** echoes the full spec (Country / Target / Var Type / Ref Date / Forecast Date / Proximity /
   Window / Primary `lso_cv / curated` / Residual `rf / all_stationary` / Lags / MIDAS / SHAP).
 
+![MARCOS Forecast screen — the model spec, verbatim: Window 10; Primary stage = lso_cv (LASSO-CV) on "curated"; Residual stage = rf (Random Forest) on "all_stationary"; per-stage Lags + MIDAS; SHAP attributions ON; the Run Summary (right) echoes the full configuration.](turnleaf-analytics-img/marcos-2-forecast-model-settings.png)
+
 **Step 6 — MARCOS → Forecast Results: inspect & explain** (`/results`). Forecast chart + **Variable Importance =
 "aggregate absolute SHAP values"**, rendered as a driver word-cloud with **Overall / Short / Medium / Long-term**
 tabs. *(This is exactly the contribution word-cloud surfaced in the production forecaster — confirming those
 drivers are SHAP-derived. Observed top drivers for a US CPI run: "Seasonality", US inflation-market forecast,
 EIA retail-gasoline forecast, gasoline all-grades, WTI/Brent 1st-dated, S&P GSCI, US PPI metals.)*
+
+![MARCOS Forecast Results — "Variable Importance: aggregate absolute SHAP values" rendered as a driver word-cloud (Overall / Short / Medium / Long-term tabs). Top drivers for a US CPI run: Seasonality, US inflation-market forecast CPI, EIA retail-gasoline forecast, gasoline all-grades, WTI/Brent 1st-dated, S&P GSCI, US PPI metals.](turnleaf-analytics-img/marcos-3-forecast-results-shap.png)
 
 **Step 7 — Performance / Performance Results.** Back-test/performance views (the in-platform analogue of the
 public `/maple/performance` matrix in §5.2).
@@ -267,11 +277,11 @@ build, integrates the feed, and optionally publishes a white-paper backtest. Del
 
 ### 6.C Source & capture method for §6.B
 The build flow above was **read directly off the MARCOS demo video** (`marcos_demo_final.mp4`, ~300 MB,
-4:55, 2574×1440 screencast). Capture method: the remote browser throttles media decode in a background
-tab, so once the MARCOS tab was brought to the foreground the `<video>` decoded; I then drove it
-programmatically (`video.currentTime = t`, `readyState` reached 4) and screenshotted/zoomed frames at
-~8/20/45/75/78/120/122/170/220/270 s. **Visuals are verified; the audio narration was not transcribed**, so
-any spoken nuance (exact algorithm tuning, governance steps) beyond what's on screen is not captured here.
+4:55, 2574×1440 screencast). The five embedded screenshots were extracted at **native 2574×1440** with
+`ffmpeg -ss <t> -i <url> -frames:v 1` (HTTP range-seek, no full download) at t = 78 / 122 / 170 / 220 / 270 s
+— the pipeline+packet, forecast model-settings, SHAP results, index-construction, and index-results screens.
+**Visuals are verified; the audio narration was not transcribed**, so any spoken nuance (exact algorithm
+tuning, governance steps) beyond what's on screen is not captured here.
 
 ### 6.D Still unverified
 - **Approval-workflow / role-based-access screens** (named in the marketing's "Delivery & Governance" layer)
